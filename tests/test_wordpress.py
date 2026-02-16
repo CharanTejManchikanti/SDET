@@ -35,6 +35,8 @@ def test_wordpress_theme_search(driver):
     search_box.send_keys("Astra")
     search_box.send_keys(Keys.ENTER)
 
+    driver.execute_script("window.scrollBy(0, 100);")
+
     # Take screenshot (optional)
     driver.save_screenshot("theme_search_result.png")
 
